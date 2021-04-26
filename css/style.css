@@ -1,0 +1,413 @@
+@charset "utf-8";
+@import url('./reset.css');
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 960px;/*최소폭 설정*/
+    background-color: #fff;/* 아래에 스크롤되는 section 영역이 안보이게 하기 위함 */
+    border-bottom: 3px solid #3b3b3b;
+    z-index: 1000;
+}
+
+header>.container{
+    position: relative;
+    width: 960px;
+    height: 66px;
+    margin: 0 auto;
+    /* background-color: #ff0; */
+}
+
+header>.container>.ci{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    width: 60px;
+    background-image: url(../images/line_header_img_ci.png);
+    background-size: cover;
+}
+
+
+header>.container>.ci>a{
+    display: block;
+    height: 21px;
+    text-indent: -9999px;
+}
+
+header>.container>nav{
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    margin-top: -2px;
+}
+
+header>.container>nav>.gnb>li{
+    float: left;
+    height: 10px;
+    border-right: 1px solid #ccc;
+}
+
+header>.container>nav>.gnb>li:last-child{border-right-width: 0;}
+
+header>.container>nav>.gnb>li>a{
+    display: block;
+    height: 10px;
+    color: #444;
+    line-height: 10px;
+    padding: 0 10px;
+
+}
+
+header>.container>nav>.gnb>li:hover>a,
+header>.container>nav>.gnb>li.on>a{
+    color: #01B901;
+}
+
+header>.container>form{
+    position: absolute;
+    right: 90px;
+    top: 22px;
+    width: 140px;
+    border: 1px solid #dfdfdf;
+}
+
+header>.container>form:hover{
+    background-color: #eee;
+}
+
+header>.container>form>fieldset>label{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    text-indent: -9999px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #aaa transparent transparent transparent;
+}
+
+header>.container>form>fieldset>input{
+   /* 폼컨트롤 요소를 스타일링 할때는 아래 3요소를 리셋한다. */
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 22px;
+    font-size: 11px;
+    text-indent: 10px;
+    cursor: pointer;
+}
+
+
+header>.container>form>fieldset>.langlist{
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: 24px;
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+}
+
+header>.container>form>fieldset>.langlist>li{}
+
+header>.container>form>fieldset>.langlist>li{
+    padding-top: 8px;
+}
+
+header>.container>form>fieldset>.langlist>li:last-child{
+    padding-bottom: 8px;
+}
+
+header>.container>form>fieldset>.langlist>li>a{
+    display: block;
+    padding-left: 10px;
+    font-size: 11px;
+}
+
+header>.container>form>fieldset>.langlist>li:hover>a,
+header>.container>form>fieldset>.langlist>li.on>a{
+    color: #01B901;
+}
+
+
+section{
+    margin-top: 69px;/* header가 pos:f 되어서 위로 끌어당겨지지기 때문에 header의 높이만큼 마진 설정 */
+}
+
+section>.line-visual{
+    overflow: hidden;
+    position: relative;
+    height: 440px;
+}
+
+section>.line-visual>.line-visual-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400%;
+    height: 100%;
+}
+
+section>.line-visual>.line-visual-container>li{
+    float: left;
+    position: relative;
+    width: 25%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(1){
+    background-image: url(../images/line-visual-pc-001.png);
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(2){
+    background-image: url(../images/line-visual-pc-002.png);
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(3){
+    background-image: url(../images/line-visual-pc-003.png);
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(4){
+    background-image: url(../images/line-visual-pc-004.png);
+}
+
+section>.line-visual>.line-visual-container>li>p{text-indent: -9999px;}
+
+
+section>.line-visual>.line-visual-container>li>p>a{
+    display: block;
+    position: absolute;
+    left: 50%;
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(1)>p>a{
+    top: 293px;
+    width: 95px;
+    height: 32px;
+    margin-left: -480px;
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(2)>p>a{
+    top: 311px;
+    width: 113px;
+    height: 32px;
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(2)>p>a:nth-of-type(1){margin-left: -480px;}
+section>.line-visual>.line-visual-container>li:nth-child(2)>p>a:nth-of-type(2){margin-left: -354px;}
+
+section>.line-visual>.line-visual-container>li:nth-child(3)>p>a{
+    top: 315px;
+    width: 113px;
+    height: 32px;
+}
+
+section>.line-visual>.line-visual-container>li:nth-child(3)>p>a:nth-of-type(1){margin-left: -481px;}
+section>.line-visual>.line-visual-container>li:nth-child(3)>p>a:nth-of-type(2){margin-left: -355px;}
+
+
+section>.line-visual>.line-visual-container>li:nth-child(4)>p>a{
+    top: 315px;
+    width: 140px;
+    height: 32px;
+    margin-left: -480px;
+}
+
+section>.line-visual>.line-visual-pagination{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    width: 108px;
+    margin-left: -54px;
+}
+
+section>.line-visual>.line-visual-pagination>li{
+    width: 12px;
+    background-image: url(../images/line_visual_sp_sns.png);
+    background-position: -919px 0;
+}
+
+section>.line-visual>.line-visual-pagination>li.on,
+section>.line-visual>.line-visual-pagination>li:hover{
+    background-position: -905px 0;
+}
+
+section>.line-visual>.line-visual-pagination>li>a{
+    display: block;
+    height: 12px;
+    text-indent: -9999px;
+}
+
+
+/* 컨텐츠 영역 */
+section>article.srv{
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 100px;
+    /* border-bottom: 1px solid #f00; */
+}
+
+section>article.srv.even{
+    flex-direction: row-reverse;
+}
+
+section>article.srv>.frame{
+    overflow: hidden;
+    width: 450px;
+    height: 556px;
+}
+
+section>article.srv>.frame>img{
+    display: block;
+    width: 100%;
+}
+
+section>article.srv>.explain{
+    width: 450px;
+}
+
+section>article.srv>.explain>h3{
+    margin-top: 50px;
+    color: #444;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+}
+
+section>article.srv>.explain>p{
+    margin-top: 20px;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+section>article.srv>.explain>p>span{
+    display: block;
+    margin-top: 20px;
+}
+
+section>article.line-sticker>.frame{
+    width: 598px;
+    height: 730px;
+    margin-left: -150px;
+}
+
+section>article.line-sticker>.explain{margin-top: 70px;}
+
+
+/* .line-friends */
+section>article.line-friends{padding-bottom: 100px;}
+
+section>article.line-friends>ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section>article.line-friends>ul>li{
+    width: 300px;
+    margin:0 30px 50px 0;
+    color: #666;
+}
+
+section>article.line-friends>ul>li:nth-child(3){margin-right: 0;}
+
+section>article.line-friends>ul>li>.pht{
+    display: block;
+    width: 160px;
+    height: 284px;
+}
+
+section>article.line-friends>ul>li>.pht>img{
+    display: block;
+    width: 100%;
+}
+
+section>article.line-friends>ul>li>h4{
+    margin: 10px 0 7px;
+}
+
+section>article.line-friends>ul>li>h4>a{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    text-indent: -9999px;
+    background-image: url(../images/line_visual_sp_sns.png);
+    background-position: -881px 0;
+}
+
+section>article.line-friends>ul>li>p{
+    line-height: 20px;
+}
+
+
+footer{
+    min-width: 960px;
+    background-color: #333;
+}
+
+footer>.container{
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    color: #acacac;
+}
+
+footer>.container>nav{}
+footer>.container>nav>.fnb{
+    font-size: 11px;
+    text-align: center;
+}
+
+footer>.container>nav>.fnb>a{
+    color: #acacac;
+}
+
+footer>.container>nav>.fnb>.bar{margin: 0 8PX;}
+
+footer>.container>address{
+    height: 40px;
+    margin-top: 15px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+}
+
+footer>.container>.validator{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 15px;
+    margin:10px 0 0 120px;
+    text-indent: -9999px;
+    background-image: url(../images/line_footer_img_validator.png);
+}
+
+footer>.container>.wa{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 220px;
+    text-indent: -9999px;
+    background-image: url(../images/line_footer_img_wa.png);
+    background-size: cover;
+}
